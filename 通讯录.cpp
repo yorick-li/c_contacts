@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h> //因为需要用到, 强制退出程序, 所以需要引入此库
 
+// 2.1 首先声明函数
+void toAddContacts();
+void toSearchNumber();
+void toContactsList();
+void toContactsData();
+void toDeleteContacts();
+void toExitSystem();
+
 // 1. 创建choose页面
 void printChoose() {
 
@@ -40,19 +48,28 @@ void printChoose() {
  */
 // 1-2.1 定义联系方式信息的结构体
 struct Contacts {
-	
+	char name[20];
+	char phone[11];
 };
 
-// 1-2.1 定义存放联系方式信息的数据结构
+// 1-2.2 定义存放联系方式信息的数据结构:这里使用数组来保存数据
+struct Contacts * createContactsArray() {
+	// a. 默认初始化10个元素
+	int len = 10;
+	struct Contacts * pContactArr = (struct Contacts *)malloc(sizeof(struct Contacts) * len);
+	return contacts;
+}
 
 
 // 2. 添加联系人
 void toAddContacts() {
+	
 
 }
 
 int main(void) {
 
+	// 创建首界面
 	printChoose();
 
 	return 0;
