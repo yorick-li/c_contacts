@@ -2,12 +2,12 @@
 #include <stdlib.h> //因为需要用到, 强制退出程序, 所以需要引入此库
 
 // 2.1 首先声明函数
-void toAddContacts();
+void toAddContacts(void);
 void toSearchNumber();
 void toContactsList();
 void toContactsData();
 void toDeleteContacts();
-void toExitSystem();
+void toExitSystem(void);
 
 // 1. 创建choose页面
 void printChoose() {
@@ -36,7 +36,7 @@ void printChoose() {
 			case THREE : toContactsList(); break;//TODO
 			case FOUR : toContactsData(); break;//TODO
 			case FIVE : toDeleteContacts(); break;//TODO
-			case SIX : toExitSystem(); exit(0); break;//TODO
+			case SIX : toExitSystem(); break;//TODO
 			default : printf("There is no %d choice.\n", choose); break;//TODO
 		}
 	}
@@ -57,15 +57,46 @@ struct Contacts * createContactsArray() {
 	// a. 默认初始化10个元素
 	int len = 10;
 	struct Contacts * pContactArr = (struct Contacts *)malloc(sizeof(struct Contacts) * len);
-	return contacts;
+	return pContactArr;
 }
 
 
 // 2. 添加联系人
 void toAddContacts() {
-	
-
+	printf("This is 1 choice!\n");
+	//TODO
 }
+
+// 3. 根据号码搜索联系人
+void toSearchNumber() {
+	printf("This is 2 choice!\n");
+	//TODO
+}
+
+// 4. 打印联系人信息
+void toContactsList() {
+	printf("This is 3 choice!\n");
+	//TODO
+}
+
+// 5. 打印联系人信息
+void toContactsData() {
+	printf("This is 4 choice!\n");
+	//TODO
+}
+
+// 6. 删除联系人
+void toDeleteContacts() {
+	printf("This is 5 choice!\n");
+	//TODO
+}
+
+// 7. 退出系统
+void toExitSystem() {
+	printf("This is 6 choice!\n");
+	exit(0);
+}
+
 
 int main(void) {
 
